@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index</title>
+  <link rel="stylesheet" href="./assets/styles/estilos.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="menu container">
+      
+       <a href="#" class="logo">ENTREGA FINAL</a> 
+
+      <nav class="navbar">
+        <ul>
+
+          <a href="./index.html" class="btn41-43 btn-43">
+            Inicio
+          </a>
+
+          <a href="#contenido" class="btn41-43 btn-43">
+            Acerca de
+          </a>
+
+          <a href="#api1" class="btn41-43 btn-43">
+            Api 1
+          </a>
+
+          <a href="#api2" class="btn41-43 btn-43">
+            Api 2
+          </a>
+
+          <a href="#formulario" class="btn41-43 btn-43">
+            Contacto
+          </a>
+        </ul>
+      </nav>
+    </div>
+        
+    </div>
+
+  </header>
+
+
+  <main>
+
+ <section class="contenido" id="contenido">
+  <h2>Acerca del Sitio</h2>
+  <p>
+    Este sitio está diseñado para los amantes de los videojuegos, brindando una experiencia clara y organizada.
+    A continuacion una breve descripcion de cada opcion del menu.  
+  </p>
+  <ul>
+    <li>
+      <strong>Acerca de:</strong> Contenido del sitio y las distintas secciones.
+    </li>
+    
+    <li>
+      <strong>API 1:</strong> Imágenes de juegos obtenidas de la api mostradas solamente dos filas.
+       Al actualizar la pagina , iran variando ya que son seleccionadas al azar mediante un algoritmo
+    </li>
+    
+    <li>
+      <strong>API 2:</strong> Catalogo completo de los juegos obtenidos de la api. Se muestran en formato tarjeta con información del juego, como su nombre, precio y un botón para acceder a más detalles.
+                              El boton de Mas Detalles tendria la funcionalidad de dirigir a otra pagina donde se podra ver con mas detalle e imagenes , las caracteristicas del juego , empresa que lo desarrollo , sitio oficial del juego
+                              Dicho boton solo muestra un mensaje informativo , ya que el armado de la pagina detalle excede lo solicitado en este curso.
+                              En esta seccion se podran hacer busquedas tanto a traves de los checkboxes que se generaron dinamicamente con  las categorias de los juegos provenientes de la api y con un campo de busqueda por nombre del juego.  Ambas busquedas trabajan en conjunto .  Por ejemplo se puede filtrar una o mas de una categoria activando el checbox correspondiente y sobre ese resultado buscar por nombre del juego
+    </li>
+    <li>
+      <strong>Contacto:</strong> Un formulario sencillo de contacto. Tendra validaciones basicas . En caso de error , sera indicado en cada campo donde lo hubiera.  
+                                 El boton enviar no tiene funcionalidad.
+                                 El boton borrar , blanquea los datos que huebieran sido ingresados en los campos y oculta mensajes de error 
+    </li>
+  </ul>
+  
+  <p>
+    El sitio utiliza la API <strong>Free-to-Play Games Database</strong> cuya url es 
+    <a href="https://rapidapi.com/digiwalls/api/free-to-play-games-database" target="_blank">
+      https://rapidapi.com/digiwalls/api/free-to-play-games-database
+    </a>.
+  </p>
+  
+</section>
+
+
+
+    <section id="api1">
+    <div class="titulo-animado">
+      <h1>Novedades !!!!!!</h1>
+    </div>
+
+    <div class="catalogo" id="seccion-novedades">
+
+    </div>
+
+  </section>
+
+
+  <section id="api2">
+
+    <h2>Catálogo Completo</h2>
+
+    <div class="checkboxes-container">
+      <div id="contenedor-checkboxes">
+        <!-- dibujar checkboxes x categorías según datos de la API -->
+      </div>
+    </div>
+  
+    <div class="search-container">
+      <div class="search-bar">
+        <input 
+          id="texto" 
+          type="text" 
+          placeholder="Buscar Juego x Nombre"
+        />
+      </div>
+      <div id="mensajeNoResultados" class="no-results">
+        <p>No se encontraron resultados que cumplan con la condición de filtro.</p>
+      </div>
+    </div>
+  
+    <div class="catalogo" id="contenedor_tarjetas">
+    </div>
+  </section>
+  
+
+
+<section id="formulario">
+  <div class="form-section">
+
+    <h2 class="form-title">Formulario de Contacto</h2>
+
+    <form novalidate>
+        <div class="form-group">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+            <span class="error-message">Campo requerido</span>
+        </div>
+  
+        <div class="form-group">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+            <span class="error-message">Campo requerido</span>
+        </div>
+  
+        <div class="form-group">
+            <label for="phone">Teléfono:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Ingresa tu teléfono (10 dígitos)" required pattern="^\d{10}$">
+            <span class="error-message">Ingrese un teléfono válido (10 dígitos)</span>
+        </div>
+  
+        <div class="form-group">
+            <label for="address">Dirección:</label>
+            <input type="text" id="address" name="address" placeholder="Ingresa tu dirección" required>
+            <span class="error-message">Campo requerido</span>
+        </div>
+
+        <button type="submit" id="submitBtn">Enviar</button>
+        <button type="reset" id="clearBtn">Borrar</button>
+    </form>
+  </div>
+  
+</section>
+
+  </main>
+
+
+  <footer>
+    <div class="footer-left">
+      <a href="#" class="logo">ENTREGA FINAL</a>
+    </div>
+    <div class="footer-right">
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+      </div>
+      <div class="contact-info">
+        <p>Dirección: 123 Calle Principal, Ciudad</p>
+        <p>Teléfono: (123) 456-7890</p>
+        <p>Correo Electrónico: info@empresa.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/productos.js"></script>
+
+</body>
+
+</html>
