@@ -36,38 +36,22 @@ img {
  }
 
 
+ .logo {
+  color: #00BCD4;
+  font-size: 25px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+
 .menu {
    position: absolute ;
-   top: 0;
+   top: 1rem;
    left: 0;
    right: 0;
    display: flex ;
    align-items: center ;
    justify-content: space-between ;
-}
-
-.logo {
-    color: #00BCD4;
-    font-size: 25px;
-    font-weight: 800;
-    text-transform: uppercase;
-}
-
-.menu .navbar ul li {
-    position: relative ;
-    float: left ;
-}
-
-.menu .navbar ul li a {
-    font-size: 18px;
-    padding: 20px;
-    color: #FFFFFF;
-    font-weight: 600;
-    display: block;
-}
-
-.menu .navbar ul li a:hover {
-    color: #00BCD4;
 }
 
 .header-content {
@@ -95,10 +79,6 @@ img {
     margin-bottom: 45px;
 }
 
-.popular {
-    padding: 100px 0;
-    text-align: center;
-}
 
 h2 {
     display:flexbox;
@@ -107,30 +87,6 @@ h2 {
     margin-bottom: 45px;
 } 
 
-.popular-content {
-    display: flex;
-    justify-content: space-between;
-}
-
-.popular-content img {
-    width: 150px;
-    border-radius: 30px;
-}
-
-.product-content {
-    display: grid;
-    grid-template-columns: repeat( 3, 1fr );
-    gap: 50px;
-}
-
-.product-1 {
-    background-color: #2A223A;
-    border-radius: 50px;
-}
-
-.product-txt {
-    padding: 50px 30px;
-}
 
 h3 {
     font-size: 20px;
@@ -138,26 +94,6 @@ h3 {
     margin-bottom: 20px;
 }
 
-.price {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.price p {
-    font-size: 17px;
-    color: #00BCD4;
-}
-
-.contact{
-    padding: 150px 300px;
-}
-
-.contact-content {
-    background-color: #2A223A;
-    text-align: center;
-    padding: 30px;
-    border-radius: 50px;
-}
 
 input {
     padding: 18px 25px ;
@@ -184,13 +120,14 @@ input {
 
 
 /* Estilos del formulario */
+
 .form-title {
   color: black;
 }
 
 .form-section {
     max-width: 600px;
-    margin: 40px auto; /* Mayor separación entre las secciones */
+    margin: 40px auto; 
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
@@ -200,8 +137,8 @@ input {
   h2 {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 20px; /* Espacio entre el título y los campos */
-    text-align: center; /* Centrar el título */
+    margin-bottom: 20px; 
+    text-align: center; 
   }
   
   form {
@@ -257,6 +194,7 @@ input {
     background-color: #555;
   }
   
+  
 /* Estilo para el contenedor del catálogo */
 .catalogo {
     display: flex;
@@ -289,13 +227,6 @@ input {
     margin-top: 10px;
 }
 
-/* Estilo para el precio del juego */
-.precio {
-    font-size: 18px;
-    font-weight: bold;
-    color: #f00;
-    margin-top: 10px;
-}
 
 /* Estilo para el botón de "Más Detalles" */
 .boton {
@@ -324,18 +255,30 @@ input {
   }
   
 
-  .checkbox-container {
+   #contenedor-checkboxes {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+    width: 180vh; 
+  }
+  
+
+   .checkbox-container {
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
     margin-left: 3rem;
     width: 10rem;
   }
-
+ 
   .custom-checkbox {
-    margin-right: 10px;
+    margin-right: 0px;
   }
 
+  .checkbox-label {
+    font-size: 12px; /* Ajusta el tamaño de la fuente */
+    line-height: 1.2; /* Ajusta el espacio entre líneas */
+  }
 
   .titulo-animado {
     text-align: center;

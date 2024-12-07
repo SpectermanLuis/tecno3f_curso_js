@@ -1,8 +1,14 @@
-// let urlApi = "https://www.freetogame.com/api/games"
 let datosObtenidos = {}
-let datosObtenidos1 = {}
+
 let tarjetasContenedor = document.querySelector("#contenedor_tarjetas")
 let chekboxesContenedor = document.querySelector("#contenedor-checkboxes")
+
+const contenedor = document.getElementById('contenedor-checkboxes');
+contenedor.style.display = 'grid';
+contenedor.style.gridTemplateColumns = 'repeat(auto-fill, minmax(120px, 1fr))';
+contenedor.style.gap = '10px';
+
+
 let detalleContenedor = document.querySelector("#contenedor_detalle")
 let novedadesContenedor = document.querySelector("#seccion-novedades")
 
@@ -21,14 +27,13 @@ const options = {
   }
 };
 
-
+  // traer datos seccion novedades
   traerDatosIndex(url, options);
+  // traer datos catalogo completo
   traerDatos(url, options);
-
 
 function traerDatosIndex(url, opcion) {
   // Obtener datos desde la api (url) 
-  // Procesar segun que pagina este activada
   fetch(url, opcion)
     .then(response => response.json())
     .then(datosApi => {
@@ -36,7 +41,7 @@ function traerDatosIndex(url, opcion) {
       console.log(datosObtenidos)
       console.log(datosObtenidos.length)
 
-      // Llamar a la función para obtener 6 números al azar
+      // Llamar a la función para obtener números al azar
       let numerosAlAzar1 = seleccionarNumerosAlAzar(12);
       /*      console.log("Números seleccionados al azar: " + numerosAleatorios);
            console.log(datosObtenidos[numerosAleatorios[0]])
@@ -67,12 +72,9 @@ function crearMostrarImagenesNovedad(arregloJuegos, numeros, ubicacion) {
 </div>`
 
   }
-
   console.log(imagenes)
   ubicacion.innerHTML = imagenes
 }
-
-
 
 
 function traerDatos(url, opcion) {
